@@ -118,6 +118,28 @@ class Color(Device):
             {"color_temp": 0, "hue": hue, "saturation": saturation}
         )
 
+class Effects(Device):
+    def setLightingEffect(self, effect:int):
+        lightingEffectPreset = [
+            "Aurora",
+            "BubblingCauldron",
+            "CandyCane",
+            "Christmas",
+            "Flicker",
+            "GrandmasChristmasLights",
+            "Hanukkah",
+            "HauntedMansion",
+            "Icicle",
+            "Lightning",
+            "Ocean",
+            "Rainbow",
+            "Raindrop",
+            "Spring",
+            "Sunrise",
+            "Sunset",
+            "Valentines",
+            ]
+        return self._set_device_info({"set_lighting_effect":effect})
 
 class P100(Switchable):
     pass
